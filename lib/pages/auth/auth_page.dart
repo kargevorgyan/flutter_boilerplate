@@ -1,12 +1,9 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../custom_paint/background_paint.dart';
 import '../../forms/auth_form.dart';
-import '../../providers/screen_service.dart';
-import '../../router.gr.dart';
 import '../../store/auth/auth_state.dart';
 
 class AuthPage extends StatefulWidget {
@@ -52,16 +49,6 @@ class _AuthPageState extends State<AuthPage> {
               ),
             ),
             const AuthForm(),
-            RichText(
-              text: TextSpan(
-                text: 'Forgot password?',
-                style: Theme.of(context).textTheme.subtitle2,
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () async {
-                    await router.popAndPush(SplashScreenRoute());
-                  },
-              ),
-            ),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:uuid/uuid.dart';
@@ -213,6 +214,16 @@ class _AuthFormState extends State<AuthForm> {
                 }
               },
             ),
+          ),
+        ),
+        RichText(
+          text: TextSpan(
+            text: 'Forgot password?',
+            style: Theme.of(context).textTheme.subtitle2,
+            recognizer: TapGestureRecognizer()
+              ..onTap = () async {
+                await router.popAndPush(SplashScreenRoute());
+              },
           ),
         ),
       ],
