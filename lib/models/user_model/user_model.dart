@@ -14,6 +14,8 @@ class UserModel with _$UserModel {
     DateTime? updatedAt,
     String? firstName,
     String? lastName,
+    String? username,
+    String? password,
   }) = _UserModel;
 
   late final fullName = '$firstName $lastName';

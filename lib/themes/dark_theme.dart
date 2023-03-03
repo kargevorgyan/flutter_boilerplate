@@ -112,8 +112,8 @@ final darkTheme = base.copyWith(
     secondarySelectedColor: Colors.transparent,
   ),
   sliderTheme: base.sliderTheme.copyWith(
-    activeTrackColor: AppColors.red,
-    inactiveTrackColor: AppColors.extraLightGray,
+    activeTrackColor: const Color.fromRGBO(26, 92, 255, 1),
+    inactiveTrackColor: const Color.fromRGBO(31, 40, 59, 1),
     overlayColor: Colors.transparent,
     thumbColor: AppColors.red,
     thumbShape: SliderComponentShape.noOverlay,
@@ -135,34 +135,31 @@ final darkTheme = base.copyWith(
       fontFamily: FontFamily.CeraPro,
     ),
     hintStyle: base.primaryTextTheme.bodyText1!.copyWith(
-      color: AppColors.grayMedium,
+      color: AppColors.white,
       fontFamily: FontFamily.CeraPro,
       fontWeight: FontWeight.normal,
       fontSize: 16,
       letterSpacing: -.32,
       height: 1.25,
     ),
-    fillColor: AppColors.darkTextFillColor,
+    fillColor: AppColors.charcoal,
     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
     border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderRadius: BorderRadius.all(Radius.circular(24)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 2,
+        color: Color.fromRGBO(99, 113, 222, 1),
       ),
     ),
-    enabledBorder: const UnderlineInputBorder(
+    enabledBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 0,
+        color: Color.fromRGBO(99, 113, 222, 1),
       ),
     ),
-    focusedBorder: const UnderlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 0,
+        color: Color.fromRGBO(99, 113, 222, 1),
       ),
     ),
     filled: true,
@@ -335,7 +332,7 @@ final darkTheme = base.copyWith(
       color: AppColors.white,
       fontFamily: FontFamily.CeraPro,
       fontWeight: FontWeight.w500,
-      fontSize: 16,
+      fontSize: 14,
       height: 1.25,
       letterSpacing: -.32,
     ),
@@ -378,5 +375,31 @@ final darkTheme = base.copyWith(
       fontSize: 20,
       height: 1.1,
     ),
+  ),
+  checkboxTheme: CheckboxThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) { return null; }
+      if (states.contains(MaterialState.selected)) { return AppColors.red; }
+      return null;
+    }),
+  ),
+  radioTheme: RadioThemeData(
+    fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) { return null; }
+      if (states.contains(MaterialState.selected)) { return AppColors.red; }
+      return null;
+    }),
+  ),
+  switchTheme: SwitchThemeData(
+    thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) { return null; }
+      if (states.contains(MaterialState.selected)) { return AppColors.red; }
+      return null;
+    }),
+    trackColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) { return null; }
+      if (states.contains(MaterialState.selected)) { return AppColors.red; }
+      return null;
+    }),
   ),
 );

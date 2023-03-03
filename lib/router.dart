@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
+import 'pages/auth/auth_page.dart';
 
 import 'pages/dashboard/dashboard_page.dart';
-import 'pages/login_page/login_page.dart';
 import 'pages/splash_screen/splash_screen.dart';
 
 export 'router.gr.dart';
@@ -16,8 +16,7 @@ export 'router.gr.dart';
       fullscreenDialog: true,
     ),
     AdaptiveRoute(
-      page: LoginPage,
-      fullscreenDialog: true,
+      page: AuthPage,
     ),
     AdaptiveRoute(
       page: DashboardPage,

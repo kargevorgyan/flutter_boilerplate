@@ -111,8 +111,8 @@ final lightTheme = base.copyWith(
     secondarySelectedColor: Colors.transparent,
   ),
   sliderTheme: base.sliderTheme.copyWith(
-    activeTrackColor: AppColors.red,
-    inactiveTrackColor: AppColors.extraLightGray,
+    activeTrackColor: const Color.fromRGBO(26, 92, 255, 1),
+    inactiveTrackColor: const Color.fromRGBO(191, 219, 254, 1),
     overlayColor: Colors.transparent,
     thumbColor: AppColors.red,
     thumbShape: SliderComponentShape.noOverlay,
@@ -139,27 +139,24 @@ final lightTheme = base.copyWith(
       letterSpacing: -.32,
       height: 1.25,
     ),
-    fillColor: AppColors.extraLightGray,
+    fillColor: AppColors.white,
     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
     border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderRadius: BorderRadius.all(Radius.circular(24)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 2,
+        color: Color.fromRGBO(74, 85, 167, 1),
       ),
     ),
-    enabledBorder: const UnderlineInputBorder(
+    enabledBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 0,
+        color: Color.fromRGBO(74, 85, 167, 1),
       ),
     ),
-    focusedBorder: const UnderlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.all(Radius.circular(20)),
       borderSide: BorderSide(
-        color: Colors.transparent,
-        width: 0,
+        color: Color.fromRGBO(74, 85, 167, 1),
       ),
     ),
     filled: true,
@@ -328,10 +325,10 @@ final lightTheme = base.copyWith(
       letterSpacing: -.32,
     ),
     subtitle2: base.primaryTextTheme.subtitle2!.copyWith(
-      color: AppColors.charcoal,
+      color: Color.fromRGBO(26, 92, 255, 1),
       fontFamily: FontFamily.CeraPro,
       fontWeight: FontWeight.w500,
-      fontSize: 16,
+      fontSize: 14,
       height: 1.25,
       letterSpacing: -.32,
     ),

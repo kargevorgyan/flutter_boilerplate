@@ -4,7 +4,7 @@ class AppColors {
   AppColors._();
 
   static const yellow = Color(0xFFFEAE1C);
-  static const charcoal = Color(0xFF212121);
+  static const charcoal = Color(0xFF181818);
   static const chalkboardBlack = Color(0xFF262C2E);
   static const blackHeadlines = Color(0xFF262C2E);
   static const graySubtitles = Color(0xFF65616A);
@@ -12,7 +12,7 @@ class AppColors {
   static const burgundy = Color(0xFF60003C);
   static const extraLightGray = Color(0xFFF9F7F4);
   static const gray = Color(0xFF939393);
-  static const darkGray = Color(0xFF65616A);
+  static const darkGray = Color(0xFF262931);
   static const grayMedium = Color(0xFFA9A7A3);
   static const grayRegular = Color(0xFFC4C4C4);
   static const white = Color(0xFFFFFDFA);

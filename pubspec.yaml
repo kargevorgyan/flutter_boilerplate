@@ -75,7 +75,7 @@ dependencies:
 
   # An SVG rendering and widget library for Flutter,
   # which allows painting and displaying Scalable Vector Graphics 1.1 files.
-  flutter_svg: ^1.0.3
+  flutter_svg: ^2.0.2
 
   # Easy and Fast internationalizing and localization your Flutter Apps,
   # this package simplify the internationalizing process .
@@ -93,9 +93,15 @@ dependencies:
   rxdart: ^0.27.3
 
   # Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
-  url_launcher: ^6.1.2
+  url_launcher: ^6.1.10
 
   flutter_hooks: ^0.18.4
+  flutter_advanced_segment: ^3.0.1
+  animated_segmented_tab_control: ^1.0.1
+  custom_sliding_segmented_control: ^1.7.4
+  email_validator: ^2.1.17
+  uuid: ^3.0.7
+  flutter_pw_validator: ^1.5.0
 
 # Dependencies that are only needed in the development phase
 # of the package itself are listed under dev_dependencies.
@@ -140,6 +146,7 @@ flutter:
 
   assets:
     - assets/translations/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
